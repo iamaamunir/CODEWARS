@@ -1,15 +1,7 @@
 function score(dice) {
-  // Fill me in!
-  // const rules = {
-  //   'ThreeOnes': 1000,
-  //   ""
-
-  // }
-  // const sortedDice = dice.sort((a, b) => a - b);
   const occurrences = dice.reduce(function (acc, curr) {
     return acc[curr] ? ++acc[curr] : (acc[curr] = 1), acc;
   }, {});
-  console.log(occurrences);
 
   let score = [];
   const entries = Object.entries(occurrences);
@@ -79,8 +71,5 @@ function score(dice) {
 
   const totalScore = score.reduce((acc, cur) => acc + cur, 0);
   console.log(totalScore);
-
-  // for (let { i, j } in occurences) {
-  // }
 }
 score([3, 1, 3, 1, 2]);
